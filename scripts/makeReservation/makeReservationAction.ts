@@ -1,28 +1,17 @@
+import { makeReservationRequest } from "./makeReservationRequest";
 import {
-    getConsoleArgumentsByNames,
-    getInvalidConsoleArguments
-} from "../../helpers/consoleArguments/consoleArguments.utils";
-import {
-    makeReservationRequest,
-    IMakeReservationParams
-} from "./makeReservationRequest";
+    IActionConfig,
+    performAction
+} from "../../helpers/actions/performAction.util";
 
 const makeReservationAction = async () => {
-    const consoleParamNames = ["vehicleId"];
-    const invalidArguments = getInvalidConsoleArguments(consoleParamNames);
-    if (invalidArguments.length > 0) {
-        console.error(
-            `Invalid or missing params for make reservation: ${invalidArguments}!`
-        );
-        return;
-    }
-    const data = getConsoleArgumentsByNames(consoleParamNames);
-
-    const makeReservationParams: IMakeReservationParams = {
-        vehicleId: data.vehicleId
+    const config: IActionConfig = {
+        request: makeReservationRequest,
+        actionName: "make reservation",
+        consoleArgumentNames: ["vehicleId"]
     };
 
-    makeReservationRequest(makeReservationParams);
+    await performAction(config);
 };
 
 makeReservationAction();

@@ -5,13 +5,14 @@
   "main": "app.ts",
   "scripts": {
     "app": "ts-node app.ts",
-    "login-test": "ts-node app.ts --action=login --username=TODO --password=TODO",
-    "vehicle-state-test": "ts-node app.ts --action=vehicleState --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela",
-    "make-reservation-test": "ts-node app.ts --action=makeReservation --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela",
-    "end-ride-test": "ts-node app.ts --action=endRide --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela --rideId=TODO",
-    "cancel-reservation-test": "ts-node app.ts --action=cancelReservation --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela --rideId=TODO",
-    "start-engine-test": "ts-node app.ts --action=startEngine --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela --rideId=TODO",
-    "pause-ride-test": "ts-node app.ts --action=pauseRide --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela --rideId=TODO"
+    "login-test": "ts-node app.ts --action=login",
+    "login": "ts-node app.ts --action=login",
+    "vehicle-state": "ts-node app.ts --action=vehicleState",
+    "make-reservation": "ts-node app.ts --action=makeReservation",
+    "end-ride": "ts-node app.ts --action=endRide",
+    "cancel-reservation": "ts-node app.ts --action=cancelReservation",
+    "start-engine": "ts-node app.ts --action=startEngine",
+    "pause-ride": "ts-node app.ts --action=pauseRide"
   },
   "dependencies": {
     "@types/minimist": "^1.2.0",

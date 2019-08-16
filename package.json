@@ -1,15 +1,23 @@
 {
   "name": "one-hop-scripts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
+  "main": "app.ts",
   "scripts": {
-    "login": "ts-node scripts/login/loginAction.ts",
-    "make-reservation": "ts-node scripts/makeReservation/makeReservationAction.ts"
+    "app": "ts-node app.ts",
+    "login-test": "ts-node app.ts --action=login --username=TODO --password=TODO",
+    "vehicle-state-test": "ts-node app.ts --action=vehicleState --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela",
+    "make-reservation-test": "ts-node app.ts --action=makeReservation --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela",
+    "end-ride-test": "ts-node app.ts --action=endRide --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela --rideId=TODO",
+    "cancel-reservation-test": "ts-node app.ts --action=cancelReservation --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela --rideId=TODO",
+    "start-engine-test": "ts-node app.ts --action=startEngine --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela --rideId=TODO",
+    "pause-ride-test": "ts-node app.ts --action=pauseRide --token=948b61e3-9542-4a11-a758-e15975f86cd9 --vehicleId=Gazela --rideId=TODO"
   },
   "dependencies": {
     "@types/minimist": "^1.2.0",
     "axios": "^0.19.0",
     "minimist": "^1.2.0",
+    "query-string": "^6.8.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   },

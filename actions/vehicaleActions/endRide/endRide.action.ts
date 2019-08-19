@@ -1,13 +1,13 @@
 import { VehicleAction } from "../../../helpers/params/prepareVehicaleParams.util";
-import { IEndRideResponse } from "./endRide.definition";
 import { runVehicaleAction } from "../common/runVehicaleAction.util";
+import { IVehicaleActionsesponse } from "../common/vehicaleActions.definition";
 
 export const endRideAction = (
     token: string,
     vehicleId: string,
     rideId: string
 ) => {
-    return runVehicaleAction<IEndRideResponse>({
+    return runVehicaleAction<IVehicaleActionsesponse>({
         token,
         action: VehicleAction.END,
         vehicleId,

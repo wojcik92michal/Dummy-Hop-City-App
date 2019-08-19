@@ -30,8 +30,7 @@ export const vehicleStateController = async () => {
             consoleParams.vehicleId
         );
 
-        // TODO [mw] handle response
-        console.log(response.data);
+        console.log('Vehicle state:', response.data);
     } catch (error) {
         handleRequestError(error);
     }

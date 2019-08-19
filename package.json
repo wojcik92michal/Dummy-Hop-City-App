@@ -5,7 +5,6 @@
   "main": "app.ts",
   "scripts": {
     "app": "ts-node app.ts",
-    "login-test": "ts-node app.ts --action=login",
     "login": "ts-node app.ts --action=login",
     "vehicle-state": "ts-node app.ts --action=vehicleState",
     "make-reservation": "ts-node app.ts --action=makeReservation",

@@ -27,8 +27,7 @@ export const pauseRideController = async () => {
             consoleParams.rideId
         );
 
-        // TODO [mw] handle response
-        console.log(response.data);
+        console.log('Ride paused:', response.data);
     } catch (error) {
         handleRequestError(error);
     }

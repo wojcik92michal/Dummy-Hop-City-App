@@ -27,8 +27,7 @@ export const cancelReservationController = async () => {
             consoleParams.rideId
         );
 
-        // TODO [mw] handle response
-        console.log(response.data);
+        console.log('Reservation cancelled:', response.data);
     } catch (error) {
         handleRequestError(error);
     }

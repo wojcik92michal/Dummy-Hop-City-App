@@ -1,13 +1,13 @@
 import { VehicleAction } from "../../../helpers/params/prepareVehicaleParams.util";
-import { IPauseRideResponse } from "./pauseRide.definition";
 import { runVehicaleAction } from "../common/runVehicaleAction.util";
+import { IVehicaleActionsesponse } from "../common/vehicaleActions.definition";
 
 export const pauseRideAction = async (
     token: string,
     vehicleId: string,
     rideId: string
 ) => {
-    return runVehicaleAction<IPauseRideResponse>({
+    return runVehicaleAction<IVehicaleActionsesponse>({
         token,
         action: VehicleAction.PAUSED,
         vehicleId,

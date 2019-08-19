@@ -6,6 +6,7 @@ import { endRideController } from "./actions/vehicaleActions/endRide/endRide.con
 import { cancelReservationController } from "./actions/vehicaleActions/cancelReservation/cancelReservation.controller";
 import { startEngineController } from "./actions/vehicaleActions/startEngine/startEngine.controller";
 import { pauseRideController } from "./actions/vehicaleActions/pauseRide/pauseRide.controller";
+import { initAppConfig } from "./config/app.config";
 
 enum Actions {
     login = "login",
@@ -18,6 +19,8 @@ enum Actions {
 }
 
 const runApp = () => {
+    initAppConfig();
+
     const actionName = getConsoleArgumentByName("action");
 
     console.log(`Running action: ${actionName}...`);

@@ -27,8 +27,7 @@ export const startEngineController = async () => {
             consoleParams.rideId
         );
 
-        // TODO [mw] handle response
-        console.log(response.data);
+        console.log('Engine started:', response.data);
     } catch (error) {
         handleRequestError(error);
     }

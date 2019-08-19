@@ -27,8 +27,7 @@ export const endRideController = async () => {
             consoleParams.rideId
         );
 
-        // TODO [mw] handle response
-        console.log(response.data);
+        console.log("Ride completed", response.data);
     } catch (error) {
         handleRequestError(error);
     }

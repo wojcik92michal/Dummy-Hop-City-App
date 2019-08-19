@@ -1,13 +1,13 @@
 import { VehicleAction } from "../../../helpers/params/prepareVehicaleParams.util";
-import { IStartEngineResponse } from "./startEngine.definition";
 import { runVehicaleAction } from "../common/runVehicaleAction.util";
+import { IVehicaleActionsesponse } from "../common/vehicaleActions.definition";
 
 export const startEngineAction = async (
     token: string,
     vehicleId: string,
     rideId: string
 ) => {
-    return runVehicaleAction<IStartEngineResponse>({
+    return runVehicaleAction<IVehicaleActionsesponse>({
         token,
         action: VehicleAction.ENGINE_STARTED,
         vehicleId,

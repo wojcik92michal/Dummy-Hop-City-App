@@ -26,8 +26,8 @@ export const makeReservationController = async () => {
             consoleParams.vehicleId
         );
 
-        // TODO [mw] handle response
-        console.log(response.data);
+        const { id, scooterId } = response.data.ride;
+        console.log(`Reservation for ${scooterId} completed! RideId: ${id}`);
     } catch (error) {
         handleRequestError(error);
     }

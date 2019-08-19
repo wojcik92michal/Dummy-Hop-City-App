@@ -1,15 +1,23 @@
 {
   "name": "one-hop-scripts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
+  "main": "app.ts",
   "scripts": {
-    "login": "ts-node scripts/login/loginAction.ts",
-    "make-reservation": "ts-node scripts/makeReservation/makeReservationAction.ts"
+    "app": "ts-node app.ts",
+    "login": "ts-node app.ts --action=login",
+    "vehicle-state": "ts-node app.ts --action=vehicleState",
+    "make-reservation": "ts-node app.ts --action=makeReservation",
+    "end-ride": "ts-node app.ts --action=endRide",
+    "cancel-reservation": "ts-node app.ts --action=cancelReservation",
+    "start-engine": "ts-node app.ts --action=startEngine",
+    "pause-ride": "ts-node app.ts --action=pauseRide"
   },
   "dependencies": {
     "@types/minimist": "^1.2.0",
     "axios": "^0.19.0",
     "minimist": "^1.2.0",
+    "query-string": "^6.8.2",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   },
